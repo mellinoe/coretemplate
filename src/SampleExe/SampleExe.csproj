@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+    <Platform Condition="'$(Platform)' == ''">x64</Platform>
     <Configuration Condition="'$(Configuration)' == '' And '$(OS)' != 'Windows_NT'">Ubuntu_Debug</Configuration>
     <Configuration Condition="'$(Configuration)' == ''">Windows_Debug</Configuration>
   </PropertyGroup>
@@ -10,7 +11,7 @@
     <OutputType>Exe</OutputType>
     <AssemblyName>SampleExe</AssemblyName>
     <RootNamespace>$(AssemblyName)</RootNamespace>
-    <NuGetTargetMoniker>.NETCoreApp,Version=v1.0</NuGetTargetMoniker>
+    <NuGetTargetMoniker>.NETCoreApp,Version=v1.1</NuGetTargetMoniker>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
